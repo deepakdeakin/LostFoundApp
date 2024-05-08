@@ -62,7 +62,7 @@ public class NewPostActivity extends AppCompatActivity {
         } else if (binding.edDate.getText().length() <= 0) {
             Constant.showToast(this, "Please Enter Date");
         } else if (binding.edLocation.getText().length() <= 0) {
-            binding.edInfo.setError("Please Enter Location");
+            binding.edLocation.setError("Please Enter Location");
         } else {
             adType = binding.rdLost.isChecked() ? Constant.LOST_POST : Constant.FOUND_POST;
             dbHelper.addNewAdvert(binding.edName.getText().toString(), binding.edPhone.getText().toString(), binding.edInfo.getText().toString(), adTime, binding.edLocation.getText().toString(), adType);
